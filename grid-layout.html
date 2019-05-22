@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Grid layout</title>
+
+		<meta name="description" content="CSS Grid Layout is the most powerful layout system currently available in CSS">
+		<meta name="author" content="Lazarev Aleksandr">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				
+				<section>
+					<h1>CSS Grid Layout</h1>
+					<h4>the most powerful layout system currently available in CSS</h4>
+					<small>by Lazarev Aleksand</small>
+				</section>
+
+				<section>
+					<h3>About:</h3>
+					<ol style="word-wrap: normal">
+						<li>What is a GRID?</li>
+						<li>Browser support</li>
+						<li>Basic terms</li>
+						<li>Container properties</li>
+						<li>Properties for items</li>
+					</ol>
+					<aside class="notes">
+							I'll talk about: 
+							1. What is a GRID?
+							2. Browser support
+							3. Basic terms
+							4. Container properties
+							5. Properties for items
+					</aside>
+				</section>
+				
+				<section>
+
+					<section>
+						<h1>What is a GRID?</h1>
+					</section>
+
+					<section style="text-align: start">
+						<h3>What is a GRID?</h3>
+						<p>
+							CSS Grid Layout is the most powerful layout system currently available in CSS. This is a <span class="fragment highlight-blue">two-dimensional system</span> that can handle both columns and rows, in contrast to the Flexbox, which is largely a one-dimensional system.
+						</p>
+						<aside class="notes">
+							What is a GRID?
+							CSS Grid Layout is the most powerful layout system currently available in CSS. This is a two-dimensional system that can handle both columns and rows, in contrast to the Flexbox, which is largely a one-dimensional system.
+						</aside>
+					</section>
+
+					<section style="text-align: start">
+						<h3>What is a GRID?</h3>
+						<p>
+							<small>
+								<span class="fragment fade-in-then-semi-out">CSS Grid Layout (aka "Grid") is a two-dimensional grid-based layout system</span>, 
+								<span class="fragment fade-in-then-semi-out">the purpose of which is to completely change the way that web-based user interfaces are designed.</span> 
+								<span class="fragment fade-in-then-semi-out">CSS was always used to lay out web pages,</span> <span class="fragment fade-in-then-semi-out">but it never did a good job.</span>
+								<span class="fragment fade-in-then-semi-out">At first we used tables,</span> <span class="fragment fade-in-then-semi-out">then wrap (floats),</span> <span class="fragment fade-in-then-semi-out">positioning and inline blocks (inline-block),</span> 
+								<span class="fragment fade-in-then-semi-out">but all of these methods are essentially just hacks and omit many important functionalities</span> <span class="fragment fade-in-then-semi-out">(for example, vertical alignment).</span> 
+								<span class="fragment fade-in-then-semi-out">Flexbox helped, but it is designed for simpler one-dimensional layouts, not for complex two-dimensional ones</span> <span class="fragment fade-in-then-semi-out">(in fact, Flexbox and Grid work very well together).</span> 
+								<span class="fragment fade-in-then-semi-out">CSS Grid - this is the first module created specifically to solve layout problems,</span> 
+								<span class="fragment fade-in-then-semi-out">which until now we have solved using hacks when creating websites.</span>
+							</small>
+						</p>
+						<aside class="notes">
+							What is a GRID?
+							CSS Grid Layout (aka "Grid") is a two-dimensional grid-based layout system, the purpose of which is to completely change the way that web-based user interfaces are designed. CSS was always used to lay out web pages, but it never did a good job. At first we used tables, then wrap (floats), positioning and inline blocks (inline-block), but all of these methods are essentially just hacks and omit many important functionalities (for example, vertical alignment). Flexbox helped, but it is designed for simpler one-dimensional layouts, not for complex two-dimensional ones (in fact, Flexbox and Grid work very well together). CSS Grid - this is the first module created specifically to solve layout problems, which until now we have solved using hacks when creating websites.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<h1>Browser support</h1>
+					</section>
+
+					<section style="text-align: start">
+						<h3>Browser support</h3>
+						<a href="https://caniuse.com/#feat=css-grid" target="_blank"><img src="./img/browser-support.png" alt="browser stats"></a>
+						<p style="display: flex; justify-content: space-between">
+							<small>
+								<span style="margin: 50px; color: yellowgreen">Partial support</span>
+								<span style="margin: 50px; color: green">Supported</span>
+								<span style="margin: 50px; color: red">Not supported</span>
+							</small>
+						</p>
+						<ul class="fragment">Coverage:
+							<li>
+								unprefixed: <span style="color: green">89.78%</span>
+							</li>
+							<li>
+								global: <span style="color: green">89.78%</span> + <span style="color: yellowgreen; font-size: smaller">2.58%</span> = <span style="color: blue">92.36%</span>
+							</li>
+						</ul>
+						<aside class="notes">
+							Here we see a table that shows current browsers and the numbers of their stable versions that work with Grid.
+							Yellow Green: partial support
+							Green - supported
+							Red - not supported
+							As we can see the full coverage is:
+							without prefix - 89.78%
+							global - 92.36%
+						</aside>
+					</section>
+						
+
+
+				</section>
+
+				<section>
+					
+					<section>
+						<h1>Basic terms</h1>
+					</section>
+
+					<section style="text-align: start;">
+						<h3>Basic terms</h3>
+						<div style="display: flex">
+							<img src="./img/basic-terms.jpg" alt="basic-terms" width="650px" height="500px">
+							<ul style="list-style-type: none">
+								<li>
+									<pre><code class="html" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 400px">
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt; 
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;p class=&quot;sub-item&quot;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+									</code></pre>
+								</li>
+								<li>
+									<div style="display: flex">
+										<small>
+											<ul style="line-height: 200%">
+												<li>track (column)</li>
+												<li>track (row)</li>
+												<li>cell</li>
+												<li>area</li>
+											</ul>
+										</small>
+										<small>
+											<ul style="line-height: 200%">
+												<li>container</li>
+												<li>item</li>
+												<li>sub-item</li>
+											</ul>
+										</small>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<aside class="notes">
+							Символы в мнемоники
+							Сервис заменяет в тексте символы [& ' " < >] на мнемоники
+							https://snipp.ru/tools/mnemonic
+						</aside>
+					</section>
+
+					<section style="text-align: start">
+						<h3>Basic terms</h3>
+						<article style="display: flex">
+							<ul style="font-size: 1.5rem">
+								<li class="fragment" style="margin: 20px"><b style="color: blue"><u>Grid container</u></b> the element to which the <em style="color: green">display: grid</em> applies. This is the direct parent for all grid elements. In this example, <em style="color: green">container</em> is a container .</li>
+								<li class="fragment" style="margin: 20px"><b style="color: blue"><u>Grid item</u></b> the child elements of the container. Here <em style="color: green">item</em> is a grid item, but not a <em style="color: green">sub-item.</em></li>
+								<li class="fragment" style="margin: 20px"><em style="color: blue">Sub-item</em> the child of grid item. And it does not inherit the grid.</li>
+							</ul>
+							<pre><code class="html" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 400px">
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt; 
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;p class=&quot;sub-item&quot;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+							</code></pre>
+						</article>
+						<aside class="notes">
+								Grid container the element to which the display: grid applies. This is the direct parent for all grid elements. In this example, container is a container .
+								Grid item the child elements of the container. Here item is a grid item, but not a sub-item.
+								Sub-item the child of grid item. And it does not inherit the grid.
+						</aside>
+					</section>
+
+					<section style="text-align: start">
+						<h3>Grid lines</h3>
+						<article style="display: flex">
+							<ul style="font-size: 1.5rem">
+								<li style="margin: 20px">Grid lines is the horizontal and vertical grid container delimiters. These lines are on either side of a column or row. They have direct and reverse numbering.</li>
+							</ul>
+							<img src="./img/basic-terms.jpg" alt="basic-terms" width="520px" height="400px">
+						</article>
+						<aside class="notes">
+							Grid lines is the horizontal and vertical grid container delimiters. These lines are on either side of a column or row. They have direct and reverse numbering.	
+						</aside>
+					</section>
+
+					<section style="text-align: start">
+						<h3>Grid track. Column and Row</h3>
+						<article style="display: flex">
+							<ul style="font-size: 1.5rem">
+								<li style="margin: 20px">Grid track is the space between two adjacent grid lines, vertical (Column) or horizontal (Row).</li>
+							</ul>
+							<img src="./img/basic-terms.jpg" alt="basic-terms" width="520px" height="400px">
+						</article>
+						<aside class="notes">
+							Grid track is the space between two adjacent grid lines, vertical (Column) or horizontal (Row).	
+						</aside>
+					</section>
+
+					<section style="text-align: start">
+						<h3>Grid cell</h3>
+						<article style="display: flex">
+							<ul style="font-size: 1.5rem">
+								<li style="margin: 20px">A grid cell is the smallest indivisible unit of a grid container that can be referenced when positioning grid elements. Formed at the intersection of the grid row and grid column.</li>
+							</ul>
+							<img src="./img/basic-terms.jpg" alt="basic-terms" width="520px" height="400px">
+						</article>
+						<aside class="notes">
+							A grid cell is the smallest indivisible unit of a grid container that can be referenced when positioning grid elements. Formed at the intersection of the grid row and grid column.
+						</aside>
+					</section>
+
+					<section style="text-align: start">
+						<h3>Grid area</h3>
+						<article style="display: flex">
+							<ul style="font-size: 1.5rem">
+								<li style="margin: 20px">A grid area is the space inside the grid of a container into which one or more grid elements can be placed. This element can consist of one or more grid cells.</li>
+							</ul>
+							<img src="./img/basic-terms.jpg" alt="basic-terms" width="520px" height="400px">
+						</article>
+						<aside class="notes">
+							A grid area is the space inside the grid of a container into which one or more grid elements can be placed. This element can consist of one or more grid cells.
+						</aside>
+					</section>
+
+
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
