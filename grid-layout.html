@@ -44,7 +44,10 @@
 				<section>
 					<h1>CSS Grid Layout</h1>
 					<h4>the most powerful layout system currently available in CSS</h4>
-					<small>by Lazarev Aleksand</small>
+					<small>by Lazarev Aleksandr</small>
+					<aside class="notes">
+						Hello my name is Alex. And I'll talk about the most powerful layout system currently available in CSS. THE GRIIID
+					</aside>
 				</section>
 
 				<section>
@@ -54,15 +57,15 @@
 						<li>Browser support</li>
 						<li>Basic terms</li>
 						<li>Container properties</li>
-						<li>Properties for items</li>
+						<li>Properties of items</li>
 					</ol>
 					<aside class="notes">
-							I'll talk about: 
+							Parts of my speach
 							1. What is a GRID?
 							2. Browser support
 							3. Basic terms
 							4. Container properties
-							5. Properties for items
+							5. Properties of items
 					</aside>
 				</section>
 				
@@ -98,8 +101,15 @@
 							</small>
 						</p>
 						<aside class="notes">
-							What is a GRID?
-							CSS Grid Layout (aka "Grid") is a two-dimensional grid-based layout system, the purpose of which is to completely change the way that web-based user interfaces are designed. CSS was always used to lay out web pages, but it never did a good job. At first we used tables, then wrap (floats), positioning and inline blocks (inline-block), but all of these methods are essentially just hacks and omit many important functionalities (for example, vertical alignment). Flexbox helped, but it is designed for simpler one-dimensional layouts, not for complex two-dimensional ones (in fact, Flexbox and Grid work very well together). CSS Grid - this is the first module created specifically to solve layout problems, which until now we have solved using hacks when creating websites.
+							What is a GRID?<br>
+							CSS Grid Layout (aka "Grid") is a two-dimensional grid-based layout system</span>, 
+								<br>the purpose of which is to completely change the way that web-based user interfaces are designed.</span> 
+								<br>CSS was always used to lay out web pages,</span> <br>but it never did a good job.</span>
+								<br>At first we used tables,</span> <br>then wrap (floats),</span> <br>positioning and inline blocks (inline-block),</span> 
+								<br>but all of these methods are essentially just hacks and omit many important functionalities</span> <span>(for example, vertical alignment).</span> 
+								<br>Flexbox helped, but it is designed for simpler one-dimensional layouts, not for complex two-dimensional ones</span> <span>(in fact, Flexbox and Grid work very well together).</span> 
+								<br>CSS Grid - this is the first module created specifically to solve layout problems,</span> 
+								<br>which until now we have solved using hacks when creating websites.</span>
 						</aside>
 					</section>
 				</section>
@@ -187,6 +197,7 @@
 							</ul>
 						</div>
 						<aside class="notes">
+								Here we see ... <br><br><br>
 							Символы в мнемоники
 							Сервис заменяет в тексте символы [& ' " < >] на мнемоники
 							https://snipp.ru/tools/mnemonic
@@ -197,11 +208,11 @@
 						<h3>Basic terms</h3>
 						<article style="display: flex">
 							<ul style="font-size: 1.5rem">
-								<li class="fragment" style="margin: 20px"><b style="color: blue"><u>Grid container</u></b> the element to which the <em style="color: green">display: grid</em> applies. This is the direct parent for all grid elements. In this example, <em style="color: green">container</em> is a container .</li>
+								<li class="" style="margin: 20px"><b style="color: blue"><u>Grid container</u></b> the element to which the <em style="color: green">display: grid</em> applies. This is the direct parent for all grid elements. In this example, <em style="color: green">container</em> is a container .</li>
 								<li class="fragment" style="margin: 20px"><b style="color: blue"><u>Grid item</u></b> the child elements of the container. Here <em style="color: green">item</em> is a grid item, but not a <em style="color: green">sub-item.</em></li>
 								<li class="fragment" style="margin: 20px"><em style="color: blue">Sub-item</em> the child of grid item. And it does not inherit the grid.</li>
 							</ul>
-							<pre><code class="html" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 400px">
+							<pre><code class="html" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 400px; height: 280px">
 &lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;item&quot;&gt;&lt;/div&gt; 
   &lt;div class=&quot;item&quot;&gt;
@@ -410,9 +421,8 @@
 							<br><br>
 							<pre style="transform: translateX(-50px)"><code class="css" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 120%; line-height: 150%; font-size: 1.5rem">
 .container {
-  grid-template-columns: repeat(3, 20px [col-start]) 5%;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-
 							</code></pre>
 						</div>
 						<aside class="notes">
@@ -490,7 +500,7 @@
 								The abbreviation for <span style="color: blue">grid-template-rows</span>, <span style="color: blue">grid-template-columns</span>, <span style="color: blue">and grid-template-areas</span>.
 								<ul style="margin: 20px">Values:
 								<li><span style="color: blue">none</span>- sets all three properties to their initial value;</li>
-								<li><span style="color: blue">subgrid</span>subgrid - sets grid-template-rows and grid-template-columns to subgrid, and grid-template-areas to its initial value;</li>
+								<li><span style="color: blue">subgrid</span> - sets grid-template-rows and grid-template-columns to subgrid, and grid-template-areas to its initial value;</li>
 								<li>&lt;<span style="color: blue">grid-template-rows</span>&gt; / &lt;<span style="color: blue">grid-template-columns</span>&gt; - sets grid-template-columns and grid-template-rows to a specific value, respectively, and sets grid-template-areas to none;</li>
 							</ul>
 							<pre style="transform: translateX(-50px)"><code class="css" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 125%; line-height: 150%; font-size: 1.5rem">
@@ -548,7 +558,7 @@
 								<li><img style="padding: 20px" src="./img/grid-column-row-gap.png" alt="grid-column-row-gap" width="500px" height="300px"></li>
 							</ul>
 							<aside class="notes">
-								Here we see how this code works.
+								Here we see how this code works. 
 							</aside>
 	
 						</article>
@@ -572,8 +582,7 @@
 							</code></pre>
 						</div>
 						<aside class="notes">
-							grid-gap The abbreviation for grid-row-gap and grid-column-gap.
-							grid-row-gap grid-column-gap - size values;
+								You can use a short gap recording like this
 						</aside>
 					</section>
 
@@ -939,6 +948,7 @@
 							</code></pre>
 						</div>
 						<aside class="notes">
+								Let's look at a short recording.<br><br>
 							grid-column & grid-row
 							The abbreviation for grid-column-start + grid-column-end, and grid-row-start + grid-row-end, respectively.
 							start-line / end-line - each of them accepts the same thing as in the long version, including coverage;
