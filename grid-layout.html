@@ -46,7 +46,9 @@
 					<h4>the most powerful layout system currently available in CSS</h4>
 					<small>by Lazarev Aleksandr</small>
 					<aside class="notes">
-						Hello my name is Alex. And I'll talk about the most powerful layout system currently available in CSS. THE GRIIID
+						Hello my name is Alex.<br>
+						And I'll talk about the most powerful layout system currently available in CSS.<br>
+						THE GRIIID
 					</aside>
 				</section>
 
@@ -60,12 +62,12 @@
 						<li>Properties of items</li>
 					</ol>
 					<aside class="notes">
-							Parts of my speach
-							1. What is a GRID?
-							2. Browser support
-							3. Basic terms
-							4. Container properties
-							5. Properties of items
+							The are parts of my speach<br>
+							1. What is a GRID?<br>
+							2. Browser support<br>
+							3. Basic terms<br>
+							4. Container properties<br>
+							5. Properties of items<br>
 					</aside>
 				</section>
 				
@@ -73,43 +75,62 @@
 
 					<section>
 						<h1>What is a GRID?</h1>
+						<aside class="notes">
+							What is a GRID?
+						</aside>
 					</section>
 
-					<section style="text-align: start">
+					<!-- <section style="text-align: start">
 						<h3>What is a GRID?</h3>
 						<p>
-							CSS Grid Layout is the most powerful layout system currently available in CSS. This is a <span class="fragment highlight-blue">two-dimensional system</span> that can handle both columns and rows, in contrast to the Flexbox, which is largely a one-dimensional system.
+							This is a <span class="fragment highlight-blue">two-dimensional system</span> that can handle both columns and rows, 
+							in contrast to the Flexbox, which is largely a one-dimensional system.
 						</p>
 						<aside class="notes">
 							What is a GRID?
 							CSS Grid Layout is the most powerful layout system currently available in CSS. This is a two-dimensional system that can handle both columns and rows, in contrast to the Flexbox, which is largely a one-dimensional system.
 						</aside>
-					</section>
+					</section> -->
 
 					<section style="text-align: start">
 						<h3>What is a GRID?</h3>
 						<p>
 							<small>
-								<span class="fragment fade-in-then-semi-out">CSS Grid Layout (aka "Grid") is a two-dimensional grid-based layout system</span>, 
+								<span class="fragment fade-in-then-semi-out">CSS Grid Layout (aka "Grid") is a <span class="fragment highlight-blue">two-dimensional grid-based layout system</span></span>, 
 								<span class="fragment fade-in-then-semi-out">the purpose of which is to completely change the way that web-based user interfaces are designed.</span> 
 								<span class="fragment fade-in-then-semi-out">CSS was always used to lay out web pages,</span> <span class="fragment fade-in-then-semi-out">but it never did a good job.</span>
 								<span class="fragment fade-in-then-semi-out">At first we used tables,</span> <span class="fragment fade-in-then-semi-out">then wrap (floats),</span> <span class="fragment fade-in-then-semi-out">positioning and inline blocks (inline-block),</span> 
 								<span class="fragment fade-in-then-semi-out">but all of these methods are essentially just hacks and omit many important functionalities</span> <span class="fragment fade-in-then-semi-out">(for example, vertical alignment).</span> 
 								<span class="fragment fade-in-then-semi-out">Flexbox helped, but it is designed for simpler one-dimensional layouts, not for complex two-dimensional ones</span> <span class="fragment fade-in-then-semi-out">(in fact, Flexbox and Grid work very well together).</span> 
-								<span class="fragment fade-in-then-semi-out">CSS Grid - this is the first module created specifically to solve layout problems,</span> 
-								<span class="fragment fade-in-then-semi-out">which until now we have solved using hacks when creating websites.</span>
+								<span class="fragment fade-in-then-semi-out">CSS Grid - this is the first module created specifically to solve layout problems, 
+								which until now we have solved using hacks when creating websites.</span>
 							</small>
 						</p>
 						<aside class="notes">
-							What is a GRID?<br>
-							CSS Grid Layout (aka "Grid") is a two-dimensional grid-based layout system</span>, 
-								<br>the purpose of which is to completely change the way that web-based user interfaces are designed.</span> 
-								<br>CSS was always used to lay out web pages,</span> <br>but it never did a good job.</span>
-								<br>At first we used tables,</span> <br>then wrap (floats),</span> <br>positioning and inline blocks (inline-block),</span> 
-								<br>but all of these methods are essentially just hacks and omit many important functionalities</span> <span>(for example, vertical alignment).</span> 
-								<br>Flexbox helped, but it is designed for simpler one-dimensional layouts, not for complex two-dimensional ones</span> <span>(in fact, Flexbox and Grid work very well together).</span> 
-								<br>CSS Grid - this is the first module created specifically to solve layout problems,</span> 
-								<br>which until now we have solved using hacks when creating websites.</span>
+							<br>CSS Grid Layout (aka "Grid") is a <span style="text-transform:uppercase; color:blue">two-dimensional grid-based layout system</span>, 
+							<br>
+							<br>the purpose of which is to completely change the way that web-based user interfaces are designed.
+							<br>
+							<br>CSS was always used to layout web pages,
+							<br>
+							<br>but it never did a that job good.
+							<br>
+							<br>At first we used tables,
+							<br>
+							<br>then wrap (floats),
+							<br>
+							<br>positioning and inline blocks (inline-block), 
+							<br>
+							<br>but all of these methods are essentially just hacks and omit many important functionalities
+							<br>
+							<br>(for example, vertical alignment).
+							<br>
+							<br>Flexbox helped, but it is designed for simpler one-dimensional layouts, not for complex two-dimensional ones
+							<br>
+							<br>(in fact, Flexbox and Grid work very well together).
+							<br>
+							<br>CSS Grid - this is the first module created specifically to solve layout problems,
+							which until now we have solved using hacks when creating websites.
 						</aside>
 					</section>
 				</section>
@@ -118,6 +139,9 @@
 
 					<section>
 						<h1>Browser support</h1>
+						<aside class="notes">
+							Browser support
+						</aside>
 					</section>
 
 					<section style="text-align: start">
@@ -139,17 +163,14 @@
 							</li>
 						</ul>
 						<aside class="notes">
-							Here we see a table that shows current browsers and the numbers of their stable versions that work with Grid.
-							Yellow Green: partial support
-							Green - supported
-							Red - not supported
-							As we can see the full coverage is:
-							without prefix - 89.78%
-							global - 92.36%
+							Here we see the table that shows current browsers and the numbers of their stable versions that work with Grid.
+							<br>
+							<br>As we can see the full coverage is:
+							<br>without prefix - round 89.78%
+							<br>global - round 92.36%
+							<br><br>And thats good
 						</aside>
 					</section>
-						
-
 
 				</section>
 
@@ -157,6 +178,9 @@
 					
 					<section>
 						<h1>Basic terms</h1>
+						<aside class="notes">
+							Basic terms
+						</aside>
 					</section>
 
 					<section style="text-align: start;">
@@ -197,10 +221,11 @@
 							</ul>
 						</div>
 						<aside class="notes">
-								Here we see ... <br><br><br>
+							Here we see the basic elements of the grid which we will discuss in the next slides
+							<br><br><br>
 							Символы в мнемоники
 							Сервис заменяет в тексте символы [& ' " < >] на мнемоники
-							https://snipp.ru/tools/mnemonic
+							<br>https://snipp.ru/tools/mnemonic
 						</aside>
 					</section>
 
@@ -223,9 +248,10 @@
 							</code></pre>
 						</article>
 						<aside class="notes">
-								Grid container the element to which the display: grid applies. This is the direct parent for all grid elements. In this example, container is a container .
-								Grid item the child elements of the container. Here item is a grid item, but not a sub-item.
-								Sub-item the child of grid item. And it does not inherit the grid.
+								Grid container the element to which the display: grid applies. 
+								This is the direct parent for all grid elements. In this example, container is a container.
+								<br>Grid item the child elements of the container. Here item is a grid item, but not a sub-item.
+								<br>Sub-item the child of grid item. And it does not inherit the grid.
 						</aside>
 					</section>
 
@@ -281,13 +307,15 @@
 						</aside>
 					</section>
 
-
 				</section>
 
 				<section>
 
 					<section>
 						<h1>Container properties</h1>
+						<aside class="notes">
+							Container properties
+						</aside>
 					</section>
 
 					<section style="text-align: start">
@@ -315,7 +343,7 @@
 							</ul>
 						</div>
 						<aside class="notes">
-							Here you can see the container properties.
+							Let's talk about the container properties
 						</aside>
 					</section>
 
@@ -338,11 +366,11 @@
 						</div>
 						<aside class="notes">
 							display
-							Defines the element as a container and sets a new mesh formatting context for its contents.
-							may be set to 
-							grid - forms a grid as a block;
+							<br>Defines the element as a container and sets a new mesh formatting context for its contents.
+							<br>
+							<!-- grid - forms a grid as a block;
 							inline-grid - forms a grid as an inline block;
-							subgrid - if your container is also an element (nested grid);
+							subgrid - if your container is also an element (nested grid); -->
 						</aside>
 					</section>
 
@@ -363,9 +391,11 @@
 						</div>
 						<aside class="notes">
 							grid-template-columns & grid-template-rows
-							Defines the columns and rows of the grid using a list of values separated by spaces. Values represent the size of the track, and the spaces between them represent the grid lines.
-							track-size - can be a fixed size, percentage or part of the free space in the grid (determined using the unit fr (fraction));
-							line-name - arbitrary name of your choice;
+							<br>Defines the columns and rows of the grid using a list of values separated by spaces. 
+							Values represent the size of the track, and the spaces between them represent the grid lines.
+							<br>
+							<!-- track-size - can be a fixed size, percentage or part of the free space in the grid (determined using the unit fr (fraction));
+							line-name - arbitrary name of your choice; -->
 						</aside>
 					</section>
 
@@ -417,7 +447,7 @@
 						<h3>grid-template-columns & grid-template-rows</h3>
 						<div style="font-size: 1.5rem">
 							<br><br><br>
-							The <span style="color: blue">fr</span> unit allows you to customize the size of the tracks as part of the free space in the container. Here is an example that sets each element one third the width of the container.
+							The <span style="color: blue">fr</span>(fraction) unit allows you to customize the size of the tracks as part of the free space in the container. Here is an example that sets each element one third the width of the container.
 							<br><br>
 							<pre style="transform: translateX(-50px)"><code class="css" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 120%; line-height: 150%; font-size: 1.5rem">
 .container {
@@ -426,7 +456,7 @@
 							</code></pre>
 						</div>
 						<aside class="notes">
-								The fr unit allows you to customize the size of the tracks as part of the free space in the container. Here is an example that sets each element one third the width of the container. 
+								The fr (fraction) unit allows you to customize the size of the tracks as part of the free space in the container. Here is an example that sets each element one third the width of the container. 
 						</aside>
 					</section>
 
@@ -450,10 +480,13 @@
 						</div>
 						<aside class="notes">
 							grid-template-areas
-							Defines a grid pattern referring to the names of areas that are set using the grid-area property. Repetition of the name of the region leads to the fact that the content covers these cells. Dot means empty cell.
-							grid-area-name - the area name specified using the grid-area;
+							Defines a grid pattern referring to the names of areas that are set using the grid-area property. 
+							Repetition of the name of the region leads to the fact that the content covers these cells. 
+							<br>Dot means empty cell.
+							<br>
+							<!-- grid-area-name - the area name specified using the grid-area;
 							.  - a point indicating an empty cell;
-							none - areas not defined;
+							none - areas not defined; -->
 						</aside>
 					</section>
 
@@ -488,13 +521,15 @@
 							</ul>
 							<aside class="notes">
 								Here we see how this code works.
-								Notice that you don’t name the lines, just the areas. If you use this syntax, it will be automatically named.
+								<br>Notice 
+								<br>that you don’t name the lines, just the areas. 
+								<br>If you use this syntax, it will be automatically named.
 							</aside>
 
 						</article>
 					</section>
 
-					<section style="text-align: start">
+					<!-- <section style="text-align: start">
 						<h3>grid-template</h3>
 						<div style="font-size: 1.5rem">
 								The abbreviation for <span style="color: blue">grid-template-rows</span>, <span style="color: blue">grid-template-columns</span>, <span style="color: blue">and grid-template-areas</span>.
@@ -515,7 +550,7 @@
 							subgrid - sets grid-template-rows and grid-template-columns to subgrid, and grid-template-areas to its initial value;
 							&lt;grid-template-rows&gt; / &lt;grid-template-columns&gt; - sets grid-template-columns and grid-template-rows to a specific value, respectively, and sets grid-template-areas to none;
 						</aside>
-					</section>
+					</section> -->
 
 					<section style="text-align: start">
 						<h3>grid-column-gap grid-row-gap</h3>
@@ -535,7 +570,8 @@
 						</div>
 						<aside class="notes">
 							grid-column-gap grid-row-gap
-							Specifies the size of the width of the lines. You can think of this as setting the width of indentations between columns and rows.
+							<br>Specifies the size of the width of the lines. 
+							<br>You can think of this as setting the width of indentations between columns and rows.
 						</aside>
 					</section>
 
@@ -605,11 +641,12 @@
 						</div>
 						<aside class="notes">
 							justify-items
-							Aligns the content along the line axis. This value applies to all grid elements within the container.
-							start - aligns the content on the left side of the area;
+							<br>Aligns the content along the line axis. This value applies to all grid elements within the container.
+							<br><br>
+							<!-- start - aligns the content on the left side of the area;
 							end - aligns the content on the right side of the area;
 							center — aligns the contents to the center of the area;
-							stretch - fills the entire width of the area (by default);
+							stretch - fills the entire width of the area (by default); -->
 						</aside>
 					</section>
 
@@ -659,11 +696,13 @@
 							</div>
 							<aside class="notes">
 								align-items
-								Aligns the content along the column axis. This value applies to all grid elements within the container.
-								start - alignment of elements on the upper part of the area;
+								<br>Aligns the content along the column axis. 
+								<br>This value applies to all grid elements within the container.
+								<br>
+								<!-- start - alignment of elements on the upper part of the area;
 								end - alignment of elements at the bottom of the area;
 								center - alignment of elements in the center of the area;
-								stretch - fills the entire height of the area (by default);
+								stretch - fills the entire height of the area (by default); -->
 							</aside>
 						</section>
 	
@@ -690,7 +729,7 @@
 								</ul>
 							</div>
 							<aside class="notes">
-								How it works
+								You can see it here.
 							</aside>
 						</section>
 
@@ -713,11 +752,14 @@
 							</div>
 							<aside class="notes">
 								justify-content
-								Sometimes the total mesh size may be smaller than the size of the container. This can happen if all grid elements have fixed units, for example, px. In this case, you can set the alignment of the grid inside the container. This property aligns the grid along the row axis.
-								stretch - scales the elements so that the grid can fill the entire width of the container;
+								Sometimes the total mesh size may be smaller than the size of the container. This can happen if all grid elements have fixed units, for example, px. 
+								<br>In this case, you can set the alignment of the grid inside the container. 
+								<br>This property aligns the grid along the row axis.
+								<br>
+								<!-- stretch - scales the elements so that the grid can fill the entire width of the container;
 								space-around - the same space between elements, and half-size indents at the edges;
 								space-between - the same space between the elements, without indents at the edges;
-								space-evenly - the same space between the elements, and full-size indents at the edges;
+								space-evenly - the same space between the elements, and full-size indents at the edges; -->
 							</aside>
 						</section>
 
@@ -744,7 +786,7 @@
 								</ul>
 							</div>
 							<aside class="notes">
-								How it works
+								Here we see how this code works. 
 							</aside>
 						</section>
 
@@ -766,11 +808,12 @@
 								</code></pre>
 							</div>
 							<aside class="notes">
-								Sometimes the total mesh size may be smaller than the size of the container. This can happen if all mesh elements have a fixed unit of measurement, for example, px. In this case, you can set the alignment of the grid inside the container. This property aligns the grid along the axis of the column.
-								stretch - scales the elements so that the grid can fill the entire height of the container;
+								In this case, you can set the alignment of the grid inside the container. This property aligns the grid along the axis of the column.
+								<br>
+								<!-- stretch - scales the elements so that the grid can fill the entire height of the container;
 								space-around - the same space between elements, and half-size indents at the edges;
 								space-between - the same space between the elements, without indents at the edges;
-								space-evenly - the same space between the elements, and full-size indents at the edges;
+								space-evenly - the same space between the elements, and full-size indents at the edges; -->
 							</aside>
 						</section>
 
@@ -797,7 +840,7 @@
 								</ul>
 							</div>
 							<aside class="notes">
-								How it works
+								You can see it here.
 							</aside>
 						</section>
 
@@ -806,7 +849,10 @@
 				<section>
 
 					<section>
-						<h1>Properties for <br>child elements <br>(Grid item)</h1>
+						<h1>Properties of <br>the child elements <br>(Grid item)</h1>
+						<aside class="notes">
+							Properties of <br>the child elements <br>(Grid item)
+						</aside>
 					</section>
 	
 					<section style="text-align: start">
@@ -827,7 +873,7 @@
 							</ul>
 						</div>
 						<aside class="notes">
-							Here you can see the container properties.
+							Let's talk about the grid item properties
 						</aside>
 					</section>
 
@@ -851,11 +897,14 @@
 						</div>
 						<aside class="notes">
 							grid-column-start grid-column-end grid-row-start grid-row-end
-							Determine the location in the grid referring to specific lines. grid-column-start / grid-row-start is the line from which the element starts, and grid-column-end / grid-row-end is the line on which the element ends.
-							line - can be a number that refers to a numbered line, or a name that refers to a named line;
+							<br>Determine the location in the grid referring to specific lines. 
+							grid-column-start / grid-row-start is the line from which the element starts, 
+							and grid-column-end / grid-row-end is the line on which the element ends.
+							<br>
+							<!-- line - can be a number that refers to a numbered line, or a name that refers to a named line;
 							span number -  is the element that will cover the number of tracks provided;
 							span name - the element will span until it reaches the line with the specified name;
-							auto - indicates auto placement, auto reach, or default reach;
+							auto - indicates auto placement, auto reach, or default reach; -->
 						</aside>
 					</section>
 
@@ -901,10 +950,11 @@
 						</div>
 						<aside class="notes">
 							Another example to better understand how this works.
+							<br>You can view this in more detail by opening the presentation later.
 						</aside>
 					</section>
 
-					<section style="text-align: start">
+					<!-- <section style="text-align: start">
 						<h3>grid-column & grid-row</h3>
 						<div style="font-size: 1.5rem">
 								Determine the location in the grid referring to specific lines. <span style="color: blue">grid-column-start</span> / <span style="color: blue">grid-row-start</span> is the line from which the element starts, 
@@ -953,7 +1003,7 @@
 							The abbreviation for grid-column-start + grid-column-end, and grid-row-start + grid-row-end, respectively.
 							start-line / end-line - each of them accepts the same thing as in the long version, including coverage;
 						</aside>
-					</section>
+					</section> -->
 
 					<section style="text-align: start">
 						<h3>grid-column & grid-row</h3>
@@ -971,7 +1021,7 @@
 							</ul>
 						</div>
 						<aside class="notes">
-							Here is an example
+							An example of how this can be written shortly
 						</aside>
 					</section>
 
@@ -996,10 +1046,12 @@
 							</code></pre>
 						</div>
 						<aside class="notes">
-							grid-column & grid-row
-							Gives the name of the element so that it can be referenced using the property created through the grid-template-areas. Alternatively, this property can be used as a shorthand for grid-row-start + grid-column-start + grid-row-end + grid-column-end.
-							name — is the name you select;
-							row-start / column-start / row-end / column-end — can be numbering or line names;
+							grid-area
+							Gives the name of the element so that it can be referenced using the property created through the grid-template-areas. 
+							<br>Alternatively, this property can be used as a shorthand for grid-row-start + grid-column-start + grid-row-end + grid-column-end.
+							<br>
+							<!-- name — is the name you select;
+							row-start / column-start / row-end / column-end — can be numbering or line names; -->
 						</aside>
 					</section>
 
@@ -1040,12 +1092,15 @@
 							</code></pre>
 						</div>
 						<aside class="notes">
+							So. In the end we will talk about justify-self and align-self
+							<br><br>
 							justify-self
-							Aligns the content of the element along the axis of the string. This value applies to content within a single item.
-							start - aligns the content on the left side of the area;
+							<br>Aligns the content of the element along the axis of the string. 
+							<br>This value applies to content within a single item.
+							<!-- start - aligns the content on the left side of the area;
 							end - aligns the content on the right side of the area;
 							center - aligns the contents in the center of the area;
-							stretch - fills the entire width of the area (by default);
+							stretch - fills the entire width of the area (by default); -->
 						</aside>
 					</section>
 
@@ -1072,7 +1127,7 @@
 							</ul>
 						</div>
 						<aside class="notes">
-							Here is an example
+							You can see it here.
 						</aside>
 					</section>
 
@@ -1094,11 +1149,12 @@
 						</div>
 						<aside class="notes">
 							align-self
-							Aligns the contents of the element along the axis of the column. This value applies to content within a single item.
+							<br>Aligns the contents of the element along the axis of the column. 
+							<!-- This value applies to content within a single item.
 							start - aligns the content to the top of the area;
 							end - aligns the content at the bottom of the area;
 							center - aligns the contents in the center of the area;
-							stretch - fills the entire height of the area (by default);
+							stretch - fills the entire height of the area (by default); -->
 						</aside>
 					</section>
 
@@ -1134,7 +1190,9 @@
 				<section>
 					<h1>THE END</h1>
 					<aside class="notes">
-						The end. Thx for watchig. cya
+						That's all i have. 
+						<br>Thx for watchig.
+						<br>CYA
 					</aside>
 				</section>
 
@@ -1153,7 +1211,7 @@
 				center: true,
 				hash: true,
 
-				transition: 'fade', // none/fade/slide/convex/concave/zoom
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
