@@ -80,25 +80,13 @@
 						</aside>
 					</section>
 
-					<!-- <section style="text-align: start">
-						<h3>What is a GRID?</h3>
-						<p>
-							This is a <span class="fragment highlight-blue">two-dimensional system</span> that can handle both columns and rows, 
-							in contrast to the Flexbox, which is largely a one-dimensional system.
-						</p>
-						<aside class="notes">
-							What is a GRID?
-							CSS Grid Layout is the most powerful layout system currently available in CSS. This is a two-dimensional system that can handle both columns and rows, in contrast to the Flexbox, which is largely a one-dimensional system.
-						</aside>
-					</section> -->
-
 					<section style="text-align: start">
 						<h3>What is a GRID?</h3>
 						<p>
 							<small>
-								<span class="fragment fade-in-then-semi-out">CSS Grid Layout (aka "Grid") is a <span class="fragment highlight-blue">two-dimensional grid-based layout system</span></span>, 
+								<span class="fragment fade-in-then-semi-out">CSS Grid Layout (aka "Grid") is a <span class="fragment highlight-blue">two-dimensional grid-based layout system,</span></span> 
 								<span class="fragment fade-in-then-semi-out">the purpose of which is to completely change the way that web-based user interfaces are designed.</span> 
-								<span class="fragment fade-in-then-semi-out">CSS was always used to lay out web pages,</span> <span class="fragment fade-in-then-semi-out">but it never did a good job.</span>
+								<span class="fragment fade-in-then-semi-out">CSS was always used to lay out web pages,</span> <span class="fragment fade-in-then-semi-out">but it never did a that job good.</span>
 								<span class="fragment fade-in-then-semi-out">At first we used tables,</span> <span class="fragment fade-in-then-semi-out">then wrap (floats),</span> <span class="fragment fade-in-then-semi-out">positioning and inline blocks (inline-block),</span> 
 								<span class="fragment fade-in-then-semi-out">but all of these methods are essentially just hacks and omit many important functionalities</span> <span class="fragment fade-in-then-semi-out">(for example, vertical alignment).</span> 
 								<span class="fragment fade-in-then-semi-out">Flexbox helped, but it is designed for simpler one-dimensional layouts, not for complex two-dimensional ones</span> <span class="fragment fade-in-then-semi-out">(in fact, Flexbox and Grid work very well together).</span> 
@@ -108,27 +96,16 @@
 						</p>
 						<aside class="notes">
 							<br>CSS Grid Layout (aka "Grid") is a <span style="text-transform:uppercase; color:blue">two-dimensional grid-based layout system</span>, 
-							<br>
 							<br>the purpose of which is to completely change the way that web-based user interfaces are designed.
-							<br>
 							<br>CSS was always used to layout web pages,
-							<br>
 							<br>but it never did a that job good.
-							<br>
 							<br>At first we used tables,
-							<br>
 							<br>then wrap (floats),
-							<br>
 							<br>positioning and inline blocks (inline-block), 
-							<br>
 							<br>but all of these methods are essentially just hacks and omit many important functionalities
-							<br>
 							<br>(for example, vertical alignment).
-							<br>
 							<br>Flexbox helped, but it is designed for simpler one-dimensional layouts, not for complex two-dimensional ones
-							<br>
 							<br>(in fact, Flexbox and Grid work very well together).
-							<br>
 							<br>CSS Grid - this is the first module created specifically to solve layout problems,
 							which until now we have solved using hacks when creating websites.
 						</aside>
@@ -528,29 +505,6 @@
 
 						</article>
 					</section>
-
-					<!-- <section style="text-align: start">
-						<h3>grid-template</h3>
-						<div style="font-size: 1.5rem">
-								The abbreviation for <span style="color: blue">grid-template-rows</span>, <span style="color: blue">grid-template-columns</span>, <span style="color: blue">and grid-template-areas</span>.
-								<ul style="margin: 20px">Values:
-								<li><span style="color: blue">none</span>- sets all three properties to their initial value;</li>
-								<li><span style="color: blue">subgrid</span> - sets grid-template-rows and grid-template-columns to subgrid, and grid-template-areas to its initial value;</li>
-								<li>&lt;<span style="color: blue">grid-template-rows</span>&gt; / &lt;<span style="color: blue">grid-template-columns</span>&gt; - sets grid-template-columns and grid-template-rows to a specific value, respectively, and sets grid-template-areas to none;</li>
-							</ul>
-							<pre style="transform: translateX(-50px)"><code class="css" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 125%; line-height: 150%; font-size: 1.5rem">
-.container {
-  grid-template: none | subgrid | &lt;grid-template-rows&gt; / &lt;grid-template-columns&gt;;
-}
-							</code></pre>
-						</div>
-						<aside class="notes">
-							grid-template
-							none - sets all three properties to their initial value;
-							subgrid - sets grid-template-rows and grid-template-columns to subgrid, and grid-template-areas to its initial value;
-							&lt;grid-template-rows&gt; / &lt;grid-template-columns&gt; - sets grid-template-columns and grid-template-rows to a specific value, respectively, and sets grid-template-areas to none;
-						</aside>
-					</section> -->
 
 					<section style="text-align: start">
 						<h3>grid-column-gap grid-row-gap</h3>
@@ -953,57 +907,6 @@
 							<br>You can view this in more detail by opening the presentation later.
 						</aside>
 					</section>
-
-					<!-- <section style="text-align: start">
-						<h3>grid-column & grid-row</h3>
-						<div style="font-size: 1.5rem">
-								Determine the location in the grid referring to specific lines. <span style="color: blue">grid-column-start</span> / <span style="color: blue">grid-row-start</span> is the line from which the element starts, 
-								and <span style="color: blue">grid-column-end</span> / <span style="color: blue">grid-row-end</span> is the line on which the element ends.<br>
-							<ul style="margin: 20px; transform: translateX(0px)">Value:
-								<li><span style="color: blue">&lt;line&gt;</span> - can be a number that refers to a numbered line;</li>
-								<li><span style="color: blue">span &lt;number&gt;</span> - is the element that will cover the number of tracks provided;</li>
-								<li><span style="color: blue">span &lt;name&gt;</span> - the element will span until it reaches the line with the specified name;</li>
-								<li><span style="color: blue">auto</span> - indicates auto placement, auto reach, or default reach;</li>
-							</ul>
-							<pre style="transform: translateX(-50px); margin: 0px;"><code class="css" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 125%; line-height: 150%; font-size: 1.5rem">
-.item {
-  grid-column-start: &lt;number&gt; | &lt;name&gt; | span &lt;number&gt; | span &lt;name&gt; | auto;
-  grid-row-end: &lt;number&gt; | &lt;name&gt; | span &lt;number&gt; | span &lt;name&gt; | auto;
-}
-							</code></pre>
-						</div>
-						<aside class="notes">
-							grid-column &grid-row
-							Determine the location in the grid referring to specific lines. grid-column-start / grid-row-start is the line from which the element starts, and grid-column-end / grid-row-end is the line on which the element ends.
-							line - can be a number that refers to a numbered line, or a name that refers to a named line;
-							span number - is the element that will cover the number of tracks provided;
-							span name - the element will span until it reaches the line with the specified name;
-							auto - indicates auto placement, auto reach, or default reach;
-						</aside>
-					</section>
-
-					<section style="text-align: start">
-						<h3>grid-column & grid-row</h3>
-						<div style="font-size: 1.5rem">
-								The abbreviation for <span style="color: blue">grid-column-start</span> + <span style="color: blue">grid-column-end</span>, 
-								<br>and <span style="color: blue">grid-row-start</span> + <span style="color: blue">grid-row-end</span>, respectively.<br>
-							<ul style="margin: 20px; transform: translateX(0px)">Value:
-								<li> <span style="color: blue">&lt;start-line&gt;</span> / <span style="color: blue">&lt;end-line&gt;</span> - each of them accepts the same thing as in the long version, including coverage;</li>
-							</ul>
-							<pre style="transform: translateX(-50px); margin: 0px;"><code class="css" style="overflow: hidden; padding: 20px; border-radius: 2rem; width: 125%; line-height: 150%; font-size: 1.5rem">
-.item {
-  grid-column-start: &lt;number&gt; | &lt;name&gt; | span &lt;number&gt; | span &lt;name&gt; | auto;
-  grid-row-end: &lt;number&gt; | &lt;name&gt; | span &lt;number&gt; | span &lt;name&gt; | auto;
-}
-							</code></pre>
-						</div>
-						<aside class="notes">
-								Let's look at a short recording.<br><br>
-							grid-column & grid-row
-							The abbreviation for grid-column-start + grid-column-end, and grid-row-start + grid-row-end, respectively.
-							start-line / end-line - each of them accepts the same thing as in the long version, including coverage;
-						</aside>
-					</section> -->
 
 					<section style="text-align: start">
 						<h3>grid-column & grid-row</h3>
